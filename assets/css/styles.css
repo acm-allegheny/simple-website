@@ -1,0 +1,201 @@
+/* ---------- IMPORTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+    /* Base colors */
+    --accent-color: #FEDA48;
+    --secondary-color: #1B3054;
+    --bg-color: #ffffff;
+    --text-color: #050505;
+    --text-color-secondary: rgba(5, 5, 5, 0.6);
+    
+    /* Typography */
+    --font-primary: 'Merriweather Sans', sans-serif;
+    --font-heading: 'Archivo Black', sans-serif;
+    
+    /* Layout */
+    --padding-page: 30px;
+    --border-radius: 8px;
+
+    /* Transitions */
+    --transition-duration: 0.4s;
+    --transition-timing: ease;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- LOGO ---------- */
+
+.navbar {
+    padding: 20px var(--padding-page);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: fit-content;
+}
+
+.logo a {
+    text-decoration: none;
+    display: block;
+}
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-duration) var (--transition-timing);
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    border: 3px solid var(--text-color);
+    box-shadow: 8px 8px 0px var(--text-color);
+    transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.hero-image img:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--text-color);
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-content .full-name {
+    color: var(--secondary-color);
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: -1rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cta-primary, .cta-secondary {
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.cta-primary {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.cta-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.cta-primary:hover, .cta-secondary:hover {
+    transform: translateY(-2px);
+}
+
+.resume-link {
+    display: inline-block;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.resume-link:hover {
+    transform: translateX(4px);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    margin-top: auto;
+    padding: 20px var(--padding-page);
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer-image {
+    width: 36px;
+    height: 36px;
+    opacity: 0.7;
+    transition: transform var(--transition-duration) var(--transition-timing),
+                opacity var(--transition-duration) var (--transition-timing);
+}
+
+.footer-image:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
